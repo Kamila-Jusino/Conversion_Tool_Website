@@ -1,0 +1,108 @@
+
+
+.navbar{
+    position:fixed;
+    top:0;
+    right:0;
+    height:100vh;
+    width:250px;
+    /* overflow-y: auto;
+     */
+    background-color: #1e90ff; /* match header blue */
+    font-family: "Space Grotesk", Arial, sans-serif; /* match font */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
+.navbar-brand{
+    color: white;
+    font-weight:bold;
+    font-size:1.5rem;
+}
+.navbar-brand:hover{
+    color:#cce6ff
+}
+
+
+.nav-link {
+    color: white;
+    font-size: 1.1rem;
+    padding: 15px 20px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #0066cc; /* darker blue hover effect */
+    color: rgb(205, 223, 255);
+    border-radius: 10px; /* round the edges*/
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-toggler-icon {
+    filter: brightness(0) invert(1); /* make hamburger icon white */
+}
+
+.navbar-collapse{
+    flex-grow: 0;
+}
+
+
+
+
+section{
+    margin-right:250px;
+    
+}
+
+/* default hide hamburger */
+#menu-toggle{
+   display: none; 
+    
+}
+
+
+/* responsive for mobile */
+@media (max-width: 993px) {
+    .navbar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        z-index: 1050;
+    }
+    section {
+        /* margin-right: 0; */
+        margin:0;
+        padding-top: 80px;
+    }
+
+
+    #menu-toggle {
+        display:block;
+        margin-left:auto;
+        margin-right: 10px;
+    }
+
+}
+
+@media (min-width: 993px) {
+
+    header{
+        margin-right: 250px;
+    }
+
+    section {
+        margin-right:250px;
+        padding-top:0;
+    }
+    #navbarNav {
+        /* ensure that bootstrap wont override with collapse  */
+        display: block !important;
+    }
+
+    
+
+}
+    

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Temperature Converter</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <!-- Bootstrap icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="nav-stylesheet.css">
+  <link rel="stylesheet" href="temperature-style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Space+Grotesk:wght@300..700&family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+  <link rel="icon" href="logo.jpg">
+  <script src="temperature-script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Temperature Conversions</h1>
+  </header>
+
+  <!-- NAVBAR START -->
+  <nav class="navbar navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Conversion Tool</a>
+      <!-- collapsible navbar button -->
+      <button class="navbar-toggler" id="menu-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <!-- align items right -->
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="home.html"><i class="bi bi-house-door-fill"></i> Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="time.html"><i class="bi bi-hourglass-split"></i> Time</a></li>
+          <li class="nav-item"><a class="nav-link" href="distance.html"><i class="bi bi-rulers"></i> Distance</a></li>
+          <li class="nav-item"><a class="nav-link" href="temperature.html"><i class="bi bi-thermometer-half"></i> Temperature</a></li>
+          <li class="nav-item"><a class="nav-link" href="program.html"><i class="bi bi-calculator"></i> Number Systems</a></li>
+          <li class="nav-item"><a class="nav-link" href="currency.html"><i class="bi bi-cash-coin"></i> Currency</a></li>
+          <li class="nav-item"><a class="nav-link" href="energy.html"><i class="bi bi-battery-half"></i> Energy</a></li>
+          <li class="nav-item"><a class="nav-link" href="pressure.html"><i class="bi bi-speedometer2"></i> Pressure</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- NAVBAR END -->
+
+  <section>
+    <div class="form-container">
+      <div class="form-inputs">
+        <div class="form-group">
+          <label id="label1" for="textbox1">Please input a temperature:</label>
+          <input type="text" id="textbox1" name="textbox1" placeholder="Enter a temperature" />
+          <label for="dropdown1">Convert from:</label>
+          <select id="dropdown1" name="fromUnit" onchange="updateTempLabels()">
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label id="label2" for="textbox2">Converted temperature:</label>
+          <input type="text" id="textbox2" name="tempOutput" readonly placeholder="Click convert to get your conversion" />
+          <label for="dropdown2">Convert to:</label>
+          <select id="dropdown2" name="toUnit" onchange="updateTempLabels()">
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="button-wrapper">
+        <button onclick="convertTemperature()">
+          <span class="shadow"></span>
+          <span class="edge"></span>
+          <span class="front text"> Convert </span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center">
+    <p>&copy; 2025 Conversion Tool. All rights reserved.</p>
+    <p>Developed by Allyson Thammavongsa, Ben Glubrecht, Zac Roberts, and Kamila Jusino.</p>
+  </footer>
+</body>
+</html>
